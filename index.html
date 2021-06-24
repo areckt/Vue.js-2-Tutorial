@@ -11,7 +11,7 @@
 <body>
     <div id="vue-app">
         <h1>Events</h1>
-        <button v-on:click="add(1)">Add a year</button>
+        <button v-on:click.once="add(1)">Add a year</button>
         <button v-on:click="subtract(1)">Subtract a year</button>
 
         <button v-on:dblclick="add(10)">Add 10 years</button>
@@ -20,6 +20,8 @@
         <p>My age is {{age}}</p>
 
         <div id="canvas" v-on:mousemove="updateXY">{{x}}, {{y}}</div>
+
+        <a v-on:click.prevent="click" href="https://www.youtube.com">YouTube</a>
     </div>
     <script src="app.js"></script>
 </body>
