@@ -13,6 +13,9 @@
         <h1>{{ greet('afternoon') }}</h1>
         <p>Name: {{ name }}</p>
         <p>Job: {{job}}</p>
+        <input type="text" v-bind:value="name"/>
+        <a v-bind:href='website'>YouTube</a>
+        <p v-html='websiteTag'></p>
     </div>
     <script src="app.js"></script>
 </body>
