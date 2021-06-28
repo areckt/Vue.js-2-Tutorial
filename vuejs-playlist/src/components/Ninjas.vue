@@ -2,10 +2,11 @@
     <div id="ninjas">
         <ul>
             <li v-for="ninja in ninjas" v-bind:key="ninja.name" v-on:click="ninja.show = !ninja.show">
-                <h2 v-on:click="test">{{ninja.name}}</h2>
+                <h2>{{ninja.name}}</h2>
                 <h3 v-show="ninja.show">{{ninja.speciality}}</h3>
             </li>
         </ul>
+        <button v-on:click="deleteNinja">Delete ninja</button>
     </div>
 </template>
 
@@ -26,8 +27,8 @@ export default {
   },
 
   methods: {
-      test: function() {
-          console.log(this.ninjas);
+      deleteNinja: function() {
+          this.ninjas.pop();
       }
   }
 }
