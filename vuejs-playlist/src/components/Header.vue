@@ -21,7 +21,7 @@ export default {
 
   methods: {
       changeTitle: function() {
-          this.title += "!!!";
+          this.$emit("changeTitle", "Vue Wizards");
       }
   }
 }
